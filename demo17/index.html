@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>extends</title>
+    </head>
+    <body>
+        <script>
+            class Human {
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+                }
+
+                greeting() {
+                    return `hello my name is ${this.name}`;
+                }
+            }
+
+
+            class Student extends Human {
+                constructor(name, age, group) {
+                    super(name, age);
+                    this.group = group;
+                }
+            }
+
+
+            let student = new Student('vasya', 21, 'mj101');
+            console.log(student.greeting());
+
+
+            class Policeman extends Student {
+
+            }
+
+            class Stuntman extends Student {
+
+            }
+
+
+            let XXX = class XXX extends Human {
+
+                constructor(a, b) {
+                    super(b, a);
+                    this.a = a;
+                    this.b = b;
+                }
+            };
+
+            let xxx = new XXX(10, 20);
+            console.log(xxx);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>classes</title>
+    </head>
+    <body>
+        <script>
+
+
+            class User {
+                constructor(name, age) {
+                    this._name = name;
+                    this._age = age;
+                }
+
+
+                greeting() {
+                    return `hello my name is ${this._name}`
+                }
+
+
+                get name() {
+                    let password = prompt("eneter password");
+
+                    if (password == '1111') {
+
+                        return this._name;
+                    }
+                    return null;
+                }
+
+                set name(value) {
+                    this._name = value;
+                }
+
+                get age() {
+                    return this._age;
+                }
+
+                set age(value) {
+                    if(value > 0  ) this._age = value;
+                }
+            }
+
+            let user1 = new User('vasya', 21);
+            console.log(user1);
+            console.log(user1.greeting());
+
+            user1.name = 'asjhdfgasdf';
+            console.log(user1.name);
+            user1.age = 100;
+            console.log(user1);
+
+
+        </script>
+    </body>
+</html>

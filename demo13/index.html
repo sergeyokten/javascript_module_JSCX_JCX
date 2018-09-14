@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            let users = [
+                {name: 'vasya', age: 31, status: false},
+                {name: 'petya', age: 30, status: true},
+                {name: 'kolya', age: 29, status: true},
+                {name: 'olya', age: 28, status: false},
+                {name: 'max', age: 30, status: true},
+                {name: 'anya', age: 31, status: false},
+                {name: 'oleg', age: 28, status: false},
+                {name: 'andrey', age: 29, status: true},
+                {name: 'masha', age: 30, status: true},
+                {name: 'olya', age: 31, status: false},
+                {name: 'max', age: 31, status: true}
+            ];
+
+            // let usersFilter = users.filter(function (user, index, array) {
+            //     console.log(user, index, array);
+            //     return user.age > 30;
+            // });
+            // console.log(usersFilter);
+
+            // let sort = users.sort(function (userCurrent, userNext) {
+            //     // console.log(userCurrent, userNext);
+            //     return userNext.age - userCurrent.age;
+            // });
+            //
+            //
+            // console.log(sort);
+
+
+            // let map = users.map(function (user/*,index,array*/) {
+            //     user.age = user.age + 20;
+            //     return user;
+            // });
+            //
+            // console.log(map);
+
+            // let find = users.find(function (user) {
+            //     return user.name == 'vasya';
+            //
+            // });
+            //
+            // console.log(find);
+
+            // let some = users.some(function (user) {
+            //
+            //     return user.age > 35;
+            // });
+            //
+            // console.log(some);
+
+            // let every = users.every(function (user) {
+            //     return user.age > 25;
+            // });
+            //
+            // console.log(every);
+
+            let reduce = [10, 20, 30, 40].reduce(function (a, b) {
+                console.log(a, b);
+                return a + b;
+            });
+
+            console.log(reduce);
+
+
+        </script>
+    </body>
+</html>

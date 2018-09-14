@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>prototype</title>
+    </head>
+    <body>
+
+        <script>
+
+            // class User {
+            //     constructor(name, age) {
+            //         this.name = name;
+            //         this.age = age;
+            //     }
+            // }
+            //
+            //
+            // User.prototype.work = function () {
+            //     return `${this.name} work`;
+            // };
+            //
+            //
+            // let user1 = new User('vasya', 21);
+            // let user2 = new User('kokos', 22);
+            // console.log(user1.work());
+            // console.log(user2.work());
+
+
+            Array.prototype.printArray = function () {
+                console.log(this);
+
+            };
+
+            let arr1 = [1, 2, 3, 4];
+            arr1.printArray();
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM</title>
+    </head>
+    <body>
+        <!--kjakdja-->
+        <h1 class="company xxx">Hello OktenWeb</h1>
+
+        <p class="target"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur esse expedita harum
+            nisi nostrum omnis quis sit totam unde veniam! Atque fugit incidunt labore libero non quasi quos vitae
+            voluptatem!
+        </p>
+        <ul>
+            <li class="list">data 1</li>
+            <li class="list">data 2</li>
+            <li class="list">data 3</li>
+        </ul>
+        <form id="main1">
+            <input class="list" type="text" name="input1" placeholder="field 1">
+            <input type="text" name="input2" placeholder="field 2">
+            <input type="text" name="input3" placeholder="field 3">
+        </form>
+        <input type="submit" id="send" value="push me 1">
+        <!--<input type="submit" id="send" value="push me 2">-->
+
+        <script>
+            // console.log(document.body.children[2].children);
+            // console.log(document.body.childNodes);
+
+            // let lis = document.getElementsByTagName('li');
+
+            // let lis = document.getElementsByClassName('list');
+            // console.log(lis);
+            // let index = 0;
+            // for (const li of lis) {
+            //     li.setAttribute('id', 'newId-' + index);
+            //     index++;
+            //
+            //     li.style.background = `rgb(${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)},${Math.round(Math.random() * 255)})`;
+            //     li.innerText = 'new data ' + index;
+            // }
+
+
+            // let sendInput = document.getElementById("send");
+            // sendInput.style.background = 'red';
+            //
+            //
+            // let company = document.getElementsByClassName('company')[0];
+            // company.classList.add('newClass');
+            // company.classList.remove('newClass');
+            // console.log(company.classList.contains('company'));
+            // console.log(company.classList);
+            //
+            // company.classList.toggle('xxx');
+            //
+
+            let lists = document.querySelector("li");
+            console.log(lists.parentElement);
+
+
+            let divElement = document.createElement('div');
+            divElement.innerHTML = '<em>hello</em>';
+
+            divElement.style.background = 'silver';
+            document.body.appendChild(divElement);
+            document.body.appendChild(divElement.cloneNode(true));
+            document.body.appendChild(divElement.cloneNode(true));
+            // document.body.insertBefore(divElement, document.getElementById('send'));
+            let button = document.getElementById('send');
+            console.log(button.parentElement);
+
+            console.log(button.getAttribute('id'));
+
+
+        </script>
+    </body>
+</html>

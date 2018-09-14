@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>call apply</title>
+    </head>
+    <body>
+        <script>
+            function User(name, age) {
+                this.name = name;
+                this.age = age;
+                this.greeting = function (param) {
+                    return `hello my name is ${this.name} ${param}`
+                }
+            }
+
+            //
+            // let user = new User('vasya', 12);
+            // console.log(user);
+            // console.log(user.greeting("qyetqywteuyqet"));
+            //
+            // let obj = {
+            //     name: 'petya'
+            // };
+            // console.log(user.greeting.call(obj, "oktenweb"));
+            // console.log(user.greeting.apply(obj, ["oktenweb"]));
+            //
+
+            function Student(name, age, group) {
+                User.apply(this, arguments);
+                this.group = group;
+            }
+
+            let student = new Student('kokos', 23, 'm101');
+            console.log(student);
+
+
+        </script>
+    </body>
+</html>

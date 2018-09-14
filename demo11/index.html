@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+
+            // function add(a, b) {
+            //     return a + b;
+            // }
+            //
+            // function minus(a, b) {
+            //     return a - b;
+            // }
+            //
+            // function multiply(a, b) {
+            //     return a * b;
+            // }
+            //
+            // function calculator(a, b, action) {
+            //     console.log(arguments);
+            //
+            //     let result;
+            //     if (action == '+') {
+            //         result = add(a, b);
+            //     } else if (action == '-') {
+            //
+            //         result = minus(a, b);
+            //     } else if (action == '*') {
+            //         result = multiply(a, b);
+            //     }
+            //     return result;
+            // }
+            //
+            // let x = calculator(10, 20, '*');
+            // console.log(x);
+            //
+            //
+            // console.log(add(100, 200));
+
+
+            let foo = function (x, y) {
+                return x + y * x
+            };
+            console.log(foo(100, 200));
+            let bar = foo;
+            let quest = bar;
+
+            console.log(quest(10, 20));
+
+            (function (a) {
+                console.log('self invoke', a);
+                // return undefined;
+            }('args'));
+
+
+            let user = {
+                name: 'vasya',
+                greeting: function () {
+                    console.log('hello my name is', this.name);
+                }
+            };
+
+            user.greeting();
+            let user3 = {
+                name: 'petya',
+                greeting: function () {
+                    console.log('hello my name is', this.name);
+                }
+            };
+
+            user3.greeting();
+
+        </script>
+    </body>
+</html>

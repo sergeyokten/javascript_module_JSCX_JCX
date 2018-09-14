@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            // function outer() {
+            //     let x = 0;
+            //     return function () {
+            //         return ++x;
+            //     };
+            // }
+            //
+            //
+            // let returnedIncrement = outer();
+            // console.log(returnedIncrement());
+            // console.log(returnedIncrement());
+            // console.log(returnedIncrement());
+            // console.log(returnedIncrement());
+
+
+            function privateVarObjectGenerator() {
+                let obj = {
+                    name: 'vasya'
+                };
+
+                return {
+                    getName: function () {
+                        return obj.name
+                    },
+                    setName: function (newName) {
+                        obj.name = newName;
+                    }
+                }
+
+            }
+
+
+            let obj1 = privateVarObjectGenerator();
+
+            obj1.setName('petya');
+            console.log(obj1.getName());
+
+
+        </script>
+    </body>
+</html>
